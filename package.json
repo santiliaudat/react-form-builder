@@ -105,7 +105,6 @@
     "start": "webpack-dev-server --hot --inline --mode development",
     "serve:api": "node server/index.js",
     "pretranspile": "rimraf lib",
-    "transpile": "babel --out-dir lib src --copy-files",
-    "prepare": "npm run build:dist && npm run build:style"
+    "transpile": "babel --out-dir lib src --copy-files"
   }
 }
