@@ -1,5 +1,5 @@
 {
-  "name": "react-form-builder2",
+  "name": "@santiliaudat/react-form-builder",
   "version": "0.9.5",
   "description": "A complete form builder for react.",
   "main": "lib/index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kiho/react-form-builder.git"
+    "url": "git+https://github.com/santiliaudat/react-form-builder.git"
   },
   "files": [
     "lib",
@@ -26,14 +26,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "author": "Kiho Chang",
-  "contributors": [
-    {
-      "name": "Zach Robichaud",
-      "email": "zach2825@gmail.com",
-      "url": "https://turtlebytes.com"
-    }
-  ],
+  "author": "Santi Liaudat",
   "dependencies": {
     "beedle": "^0.8.1",
     "classnames": "^2.2.6",
@@ -106,5 +99,14 @@
     "serve:api": "node server/index.js",
     "pretranspile": "rimraf lib",
     "transpile": "babel --out-dir lib src --copy-files"
+  },
+  "bugs": {
+    "url": "https://github.com/santiliaudat/react-form-builder/issues"
+  },
+  "homepage": "https://github.com/santiliaudat/react-form-builder#readme",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "lib": "lib"
   }
 }
