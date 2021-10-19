@@ -208,30 +208,6 @@ export default class Toolbar extends React.Component {
         field_name: "text_area_",
       },
       {
-        key: "TwoColumnRow",
-        canHaveAnswer: false,
-        name: "Two Column Row",
-        label: "",
-        icon: "fa fa-columns",
-        field_name: "two_col_row_",
-      },
-      {
-        key: "ThreeColumnRow",
-        canHaveAnswer: false,
-        name: "Three Column Row",
-        label: "",
-        icon: "fa fa-columns",
-        field_name: "three_col_row_",
-      },
-      {
-        key: "FourColumnRow",
-        canHaveAnswer: false,
-        name: "Four Column Row",
-        label: "",
-        icon: "fa fa-columns",
-        field_name: "four_col_row_",
-      },
-      {
         key: "Image",
         name: "Image",
         label: "",
@@ -431,8 +407,7 @@ export default class Toolbar extends React.Component {
 
   render() {
     return (
-      <div className="col-md-3 react-form-builder-toolbar float-right">
-        <h4>Toolbox</h4>
+      <div className="col-md-3 react-form-builder-toolbar float-left">
         <ul>
           {this.state.items.map((item) => (
             <ToolbarItem

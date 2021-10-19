@@ -3,7 +3,6 @@
  */
 
 import React from "react";
-import Grip from "../multi-column/grip";
 
 export default class HeaderBar extends React.Component {
   render() {
@@ -19,23 +18,15 @@ export default class HeaderBar extends React.Component {
                 this.props.data
               )}
             >
-              <i className="is-isolated fa fa-edit"></i>
+              <i className="is-isolated far fa-edit"></i>
             </div>
           )}
           <div
             className="btn is-isolated"
             onClick={this.props.onDestroy.bind(this, this.props.data)}
           >
-            <i className="is-isolated fa fa-trash"></i>
+            <i className="is-isolated far fa-trash-alt"></i>
           </div>
-          {!this.props.data.isContainer && (
-            <Grip
-              data={this.props.data}
-              index={this.props.index}
-              onDestroy={this.props.onDestroy}
-              setAsChild={this.props.setAsChild}
-            />
-          )}
         </div>
       </div>
     );
