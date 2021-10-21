@@ -119,7 +119,7 @@ export interface FormBuilderProps {
   url?: string;
   showCorrectColumn?: boolean;
   show_description?: boolean;
-  onLoad?: () => Promise<FormBuilderPostData>;
+  onLoad?: () => Promise<TaskData[]>;
   onPost?: (data: FormBuilderPostData) => void;
   saveUrl?: string;
 }
