@@ -323,8 +323,8 @@ export default class ReactForm extends React.Component {
         case 'RadioButtons':
         case 'Rating':
         case 'Tags':
-        case 'Range':
-          return this.getInputElement(item);
+        // case 'Range':
+        //   return this.getInputElement(item);
         case 'CustomElement':
           return this.getCustomElement(item);
         case 'FourColumnRow':
