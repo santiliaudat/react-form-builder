@@ -2,7 +2,7 @@
 import React from 'react';
 import Select from 'react-select';
 import SignaturePad from 'react-signature-canvas';
-import ReactBootstrapSlider from 'react-bootstrap-slider';
+
 
 import StarRating from './star-rating';
 import HeaderBar from './header-bar';
@@ -614,86 +614,86 @@ class Camera extends React.Component {
     );
   }
 }
+//TODO: replace range with mui slider
+// class Range extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.inputField = React.createRef();
+//     this.state = {
+//       value: props.defaultValue !== undefined ? parseInt(props.defaultValue, 10) : parseInt(props.data.default_value, 10),
+//     };
+//   }
 
-class Range extends React.Component {
-  constructor(props) {
-    super(props);
-    this.inputField = React.createRef();
-    this.state = {
-      value: props.defaultValue !== undefined ? parseInt(props.defaultValue, 10) : parseInt(props.data.default_value, 10),
-    };
-  }
+//   changeValue = (e) => {
+//     const { target } = e;
+//     this.setState({
+//       value: target.value,
+//     });
+//   }
 
-  changeValue = (e) => {
-    const { target } = e;
-    this.setState({
-      value: target.value,
-    });
-  }
+//   render() {
+//     const props = {};
+//     const name = this.props.data.field_name;
 
-  render() {
-    const props = {};
-    const name = this.props.data.field_name;
+//     props.type = 'range';
+//     props.list = `tickmarks_${name}`;
+//     props.min = this.props.data.min_value;
+//     props.max = this.props.data.max_value;
+//     props.step = this.props.data.step;
 
-    props.type = 'range';
-    props.list = `tickmarks_${name}`;
-    props.min = this.props.data.min_value;
-    props.max = this.props.data.max_value;
-    props.step = this.props.data.step;
+//     props.value = this.state.value;
+//     props.change = this.changeValue;
 
-    props.value = this.state.value;
-    props.change = this.changeValue;
+//     if (this.props.mutable) {
+//       props.ref = this.inputField;
+//     }
 
-    if (this.props.mutable) {
-      props.ref = this.inputField;
-    }
+//     const datalist = [];
+//     for (let i = parseInt(props.min_value, 10); i <= parseInt(props.max_value, 10); i += parseInt(props.step, 10)) {
+//       datalist.push(i);
+//     }
 
-    const datalist = [];
-    for (let i = parseInt(props.min_value, 10); i <= parseInt(props.max_value, 10); i += parseInt(props.step, 10)) {
-      datalist.push(i);
-    }
+//     const oneBig = 100 / (datalist.length - 1);
 
-    const oneBig = 100 / (datalist.length - 1);
+//     const _datalist = datalist.map((d, idx) => <option key={`${props.list}_${idx}`}>{d}</option>);
 
-    const _datalist = datalist.map((d, idx) => <option key={`${props.list}_${idx}`}>{d}</option>);
+//     const visible_marks = datalist.map((d, idx) => {
+//       const option_props = {};
+//       let w = oneBig;
+//       if (idx === 0 || idx === datalist.length - 1) { w = oneBig / 2; }
+//       option_props.key = `${props.list}_label_${idx}`;
+//       option_props.style = { width: `${w}%` };
+//       if (idx === datalist.length - 1) { option_props.style = { width: `${w}%`, textAlign: 'right' }; }
+//       return <label {...option_props}>{d}</label>;
+//     });
 
-    const visible_marks = datalist.map((d, idx) => {
-      const option_props = {};
-      let w = oneBig;
-      if (idx === 0 || idx === datalist.length - 1) { w = oneBig / 2; }
-      option_props.key = `${props.list}_label_${idx}`;
-      option_props.style = { width: `${w}%` };
-      if (idx === datalist.length - 1) { option_props.style = { width: `${w}%`, textAlign: 'right' }; }
-      return <label {...option_props}>{d}</label>;
-    });
+//     let baseClasses = 'SortableItem rfb-item';
+//     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    let baseClasses = 'SortableItem rfb-item';
-    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
-
-    return (
-      <div className={baseClasses}>
-        <ComponentHeader {...this.props} />
-        <div className="form-group">
-          <ComponentLabel {...this.props} />
-          <div className="range">
-            <div className="clearfix">
-              <span className="float-left">{this.props.data.min_label}</span>
-              <span className="float-right">{this.props.data.max_label}</span>
-            </div>
-            <ReactBootstrapSlider {...props} />
-          </div>
-          <div className="visible_marks">
-            {visible_marks}
-          </div>
-          <input name={name} value={this.state.value} type="hidden" />
-          <datalist id={props.list}>
-            {_datalist}
-          </datalist>
-        </div>
-      </div>
-    );
-  }
-}
+//     return (
+//       <div className={baseClasses}>
+//         <ComponentHeader {...this.props} />
+//         <div className="form-group">
+//           <ComponentLabel {...this.props} />
+//           <div className="range">
+//             <div className="clearfix">
+//               <span className="float-left">{this.props.data.min_label}</span>
+//               <span className="float-right">{this.props.data.max_label}</span>
+//             </div>
+//             <ReactBootstrapSlider {...props} />
+//           </div>
+//           <div className="visible_marks">
+//             {visible_marks}
+//           </div>
+//           <input name={name} value={this.state.value} type="hidden" />
+//           <datalist id={props.list}>
+//             {_datalist}
+//           </datalist>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
 FormElements.Header = Header;
 FormElements.Paragraph = Paragraph;
@@ -713,6 +713,6 @@ FormElements.Tags = Tags;
 FormElements.HyperLink = HyperLink;
 FormElements.Download = Download;
 FormElements.Camera = Camera;
-FormElements.Range = Range;
+// FormElements.Range = Range;
 
 export default FormElements;
