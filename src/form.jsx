@@ -320,7 +320,7 @@ export default class ReactForm extends React.Component {
       submitButton = false,
     } = this.props;
 
-    return submitButton || <input type='submit' className='btn btn-big' value={action_name} />;
+    return submitButton || <input style={{backgroundColor: this.props.buttonColor}} type='submit' className='btn btn-big' value={action_name} />;
   }
 
   render() {
@@ -427,7 +427,7 @@ export default class ReactForm extends React.Component {
     return (
       <div>
         <FormValidator emitter={this.emitter} />
-        <div className="react-form-builder-form">
+        <div className={`react-form-builder-form ${this.props.className}`}>
           <form
             encType="multipart/form-data"
             ref={(c) => (this.form = c)}
@@ -457,6 +457,7 @@ export default class ReactForm extends React.Component {
                 <a
                   href={this.props.back_action}
                   className="btn btn-default btn-cancel btn-big"
+                  style={{backgroundColor: this.props.buttonColor}}
                 >
                   {backName}
                 </a>
