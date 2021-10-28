@@ -292,11 +292,11 @@ export default class ReactForm extends React.Component {
 
   handleRenderSubmit = () => {
     const {
-      actionName = 'Submit',
+      action_name = 'Submit',
       submitButton = false,
     } = this.props;
 
-    return submitButton || <input type='submit' className='btn btn-big' value={actionName} />;
+    return submitButton || <input type='submit' className='btn btn-big' value={action_name} />;
   }
 
   render() {
@@ -353,7 +353,6 @@ export default class ReactForm extends React.Component {
     };
 
     const backName = (this.props.back_name) ? this.props.back_name : 'Cancel';
-
     return (
       <div>
         <FormValidator emitter={this.emitter} />
