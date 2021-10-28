@@ -101,7 +101,9 @@ export default class Demobar extends React.Component {
                   back_action="/"
                   back_name="Back"
                   answer_data={answers}
-                  action_name="Save"
+                  action_name="mandale"
+                  className=""
+                  buttonColor="red"
                   form_action="/api/form"
                   form_method="POST"
                   // skip_validations={true}

@@ -130,6 +130,8 @@ export interface FormGeneratorProps {
   form_action: string;
   form_method: string;
   action_name?: string;
+  className: string;
+  buttonColor: string;
   onSubmit?: () => void;
   data: any[];
   back_action?: string;
