@@ -1,14 +1,14 @@
-{
-  "name": "@santiliaudat/react-form-builder",
-  "version": "1.0.0",
-  "description": "A complete form builder for react.",
-  "main": "lib/index.js",
-  "types": "types/index.d.ts",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/santiliaudat/react-form-builder.git"
-  },
+  {
+    "name": "@ifrit1611/react-form-builder",
+    "version": "1.0.0",
+    "description": "A complete form builder for react.",
+    "main": "lib/index.js",
+    "types": "types/index.d.ts",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ifrit1611/react-form-builder.git"
+    },
   "files": [
     "lib",
     "dist",
