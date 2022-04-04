@@ -8,7 +8,7 @@ export default class HeaderBar extends React.Component {
   render() {
     return (
       <div className="toolbar-header">
-        <span className="badge badge-secondary">{this.props.data.text}</span>
+        <span className="badge badge-primary">{this.props.data.text}</span>
         <div className="toolbar-header-buttons">
           {this.props.data.element !== "LineBreak" && (
             <div

@@ -194,6 +194,14 @@
           justify-content: space-between;
           align-content: center;
           align-items: center;
+
+          .toolbar-header-buttons {
+            .btn {
+              &:hover {
+                color: #007bff !important;
+              }
+            }
+          }
         }
         &:hover {
           outline: 1px solid #ddd;
