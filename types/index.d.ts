@@ -114,7 +114,7 @@ export type ToolbarItem = {
 };
 
 export interface FormBuilderProps {
-  toolbarItems?: any[];
+  toolbarItems?: ToolbarItem[];
   files?: any[];
   url?: string;
   showCorrectColumn?: boolean;
