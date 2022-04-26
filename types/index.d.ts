@@ -127,11 +127,11 @@ export interface FormBuilderProps {
 export class ReactFormBuilder extends React.Component<FormBuilderProps> {}
 
 export interface FormGeneratorProps {
-  form_action: string;
-  form_method: string;
+  form_action?: string;
+  form_method?: string;
   action_name?: string;
-  className: string;
-  buttonColor: string;
+  className?: string;
+  buttonColor?: string;
   onSubmit?: () => void;
   data: any[];
   back_action?: string;
@@ -145,6 +145,8 @@ export interface FormGeneratorProps {
   read_only?: boolean;
   // eslint-disable-next-line no-undef
   variables?: Record<any, any>;
+  submitButton?: React.Component<any>;
+  backButton?: React.Component<any>;
 }
 
 export class ReactFormGenerator extends React.Component<FormGeneratorProps> {}

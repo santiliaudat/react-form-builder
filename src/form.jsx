@@ -320,7 +320,15 @@ export default class ReactForm extends React.Component {
       submitButton = false,
     } = this.props;
 
-    return submitButton || <input style={{backgroundColor: this.props.buttonColor}} type='submit' className='btn btn-big' value={action_name} />;
+    return submitButton || <input style={{ backgroundColor: this.props.buttonColor }} type='submit' className='btn btn-big' value={action_name} />;
+  }
+
+  handleRenderBack = () => {
+    const name = this.props.back_name || this.props.backName;
+    const backName = name || 'Cancel';
+    const { backButton = false } = this.props;
+
+    return backButton || <a href={this.props.back_action} className='btn btn-default btn-cancel btn-big'>{backName}</a>;
   }
 
   render() {
@@ -453,15 +461,9 @@ export default class ReactForm extends React.Component {
             {items}
             <div className="btn-toolbar">
               {!this.props.hide_actions && this.handleRenderSubmit()}
-              {!this.props.hide_actions && this.props.back_action && (
-                <a
-                  href={this.props.back_action}
-                  className="btn btn-default btn-cancel btn-big"
-                  style={{backgroundColor: this.props.buttonColor}}
-                >
-                  {backName}
-                </a>
-              )}
+              {!this.props.hide_actions && this.props.back_action &&
+                this.handleRenderBack()
+              }
             </div>
           </form>
         </div>
