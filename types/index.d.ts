@@ -131,8 +131,9 @@ export interface FormGeneratorProps {
   form_method?: string;
   action_name?: string;
   className?: string;
+  classNameToolbar?: string;
   buttonColor?: string;
-  onSubmit?: () => void;
+  onSubmit?: (data: any[]) => void;
   data: any[];
   back_action?: string;
   back_name?: string;
@@ -145,8 +146,8 @@ export interface FormGeneratorProps {
   read_only?: boolean;
   // eslint-disable-next-line no-undef
   variables?: Record<any, any>;
-  submitButton?: React.Component<any>;
-  backButton?: React.Component<any>;
+  submitButton?: React.ReactElement;
+  backButton?: React.ReactElement;
 }
 
 export class ReactFormGenerator extends React.Component<FormGeneratorProps> {}

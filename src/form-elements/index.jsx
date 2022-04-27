@@ -559,7 +559,7 @@ class Image extends React.Component {
             height={this.props.data.height}
           />
         )}
-        {!this.props.data.src && <div className="no-image">No Image</div>}
+        {!this.props.data.src && <div className="no-image">Sin imagen</div>}
       </div>
     );
   }
@@ -721,9 +721,9 @@ class Camera extends React.Component {
                 />
                 <div className="image-upload-control">
                   <div className="btn btn-default">
-                    <i className="fa fa-camera"></i> Upload Photo
+                    <i className="fa fa-camera"></i> Subir imagen
                   </div>
-                  <p>Select an image from your computer or device.</p>
+                  <p>Selecciona una imagen de tu dispositivo.</p>
                 </div>
               </div>
 
@@ -739,7 +739,7 @@ class Camera extends React.Component {
                     className="btn btn-image-clear"
                     onClick={this.clearImage}
                   >
-                    <i className="fa fa-times"></i> Clear Photo
+                    <i className="fa fa-times"></i> Borrar imagen
                   </div>
                 </div>
               )}

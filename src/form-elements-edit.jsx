@@ -184,7 +184,7 @@ export default class FormElementsEdit extends React.Component {
     return (
       <div>
         <div className="clearfix">
-          <h4 className="float-left">{this.props.element.text}</h4>
+          <h4 className="float-left h4">{this.props.element.text}</h4>
           <i
             className="float-right fa fa-times dismiss-edit"
             onClick={this.props.manualEditModeOff}
@@ -192,7 +192,7 @@ export default class FormElementsEdit extends React.Component {
         </div>
         {this.props.element.hasOwnProperty("content") && (
           <div className="form-group">
-            <label className="control-label">Text to display:</label>
+            <label className="control-label">Texto a mostrar:</label>
 
             <Editor
               toolbar={toolbar}
@@ -210,7 +210,7 @@ export default class FormElementsEdit extends React.Component {
         {this.props.element.hasOwnProperty("file_path") && (
           <div className="form-group">
             <label className="control-label" htmlFor="fileSelect">
-              Choose file:
+              Elegir archivo:
             </label>
             <select
               id="fileSelect"
@@ -245,7 +245,7 @@ export default class FormElementsEdit extends React.Component {
           <div>
             <div className="form-group">
               <label className="control-label" htmlFor="srcInput">
-                Link to:
+                Link a:
               </label>
               <input
                 id="srcInput"
@@ -271,14 +271,14 @@ export default class FormElementsEdit extends React.Component {
                   )}
                 />
                 <label className="custom-control-label" htmlFor="do-center">
-                  Center?
+                  Centrado?
                 </label>
               </div>
             </div>
             <div className="row">
               <div className="col-sm-3">
                 <label className="control-label" htmlFor="elementWidth">
-                  Width:
+                  Ancho:
                 </label>
                 <input
                   id="elementWidth"
@@ -291,7 +291,7 @@ export default class FormElementsEdit extends React.Component {
               </div>
               <div className="col-sm-3">
                 <label className="control-label" htmlFor="elementHeight">
-                  Height:
+                  Alto:
                 </label>
                 <input
                   id="elementHeight"
@@ -307,7 +307,7 @@ export default class FormElementsEdit extends React.Component {
         )}
         {this.props.element.hasOwnProperty("label") && (
           <div className="form-group">
-            <label>Display Label</label>
+            <label>Pregunta</label>
             <Editor
               toolbar={toolbar}
               defaultEditorState={editorState}
@@ -334,7 +334,7 @@ export default class FormElementsEdit extends React.Component {
                 )}
               />
               <label className="custom-control-label" htmlFor="is-required">
-                Required
+                Requerido
               </label>
             </div>
             {this.props.element.hasOwnProperty("readOnly") && (
@@ -352,7 +352,7 @@ export default class FormElementsEdit extends React.Component {
                   )}
                 />
                 <label className="custom-control-label" htmlFor="is-read-only">
-                  Read only
+                  Solo lectura
                 </label>
               </div>
             )}
@@ -374,7 +374,7 @@ export default class FormElementsEdit extends React.Component {
                   className="custom-control-label"
                   htmlFor="is-default-to-today"
                 >
-                  Default to Today?
+                  ¿Hoy por defecto?
                 </label>
               </div>
             )}
@@ -396,7 +396,7 @@ export default class FormElementsEdit extends React.Component {
                   className="custom-control-label"
                   htmlFor="show-time-select"
                 >
-                  Show Time Select?
+                  Mostrar hora?
                 </label>
               </div>
             )}
@@ -419,7 +419,7 @@ export default class FormElementsEdit extends React.Component {
                     className="custom-control-label"
                     htmlFor="show-time-select-only"
                   >
-                    Show Time Select Only?
+                    Mostrar hora solamente?
                   </label>
                 </div>
               )}
@@ -443,7 +443,7 @@ export default class FormElementsEdit extends React.Component {
                     className="custom-control-label"
                     htmlFor="display-horizontal"
                   >
-                    Display horizonal
+                    Horizontal
                   </label>
                 </div>
               )}
@@ -473,7 +473,7 @@ export default class FormElementsEdit extends React.Component {
           <div />
         )}
 
-        {canHavePageBreakBefore && (
+        {/* {canHavePageBreakBefore && (
           <div className="form-group">
             <label className="control-label">Print Options</label>
             <div className="custom-control custom-checkbox">
@@ -497,9 +497,9 @@ export default class FormElementsEdit extends React.Component {
               </label>
             </div>
           </div>
-        )}
+        )} */}
 
-        {canHaveAlternateForm && (
+        {/* {canHaveAlternateForm && (
           <div className="form-group">
             <label className="control-label">Alternate/Signature Page</label>
             <div className="custom-control custom-checkbox">
@@ -523,7 +523,7 @@ export default class FormElementsEdit extends React.Component {
               </label>
             </div>
           </div>
-        )}
+        )} */}
 
         {this.props.element.hasOwnProperty("step") && (
           <div className="form-group">
@@ -594,7 +594,7 @@ export default class FormElementsEdit extends React.Component {
           <div className="form-group">
             <div className="form-group-range">
               <label className="control-label" htmlFor="defaultSelected">
-                Default Selected
+                Selección por defecto
               </label>
               <input
                 id="defaultSelected"
@@ -614,7 +614,7 @@ export default class FormElementsEdit extends React.Component {
         {this.props.element.hasOwnProperty("static") &&
           this.props.element.static && (
             <div className="form-group">
-              <label className="control-label">Text Style</label>
+              <label className="control-label">Estilo del texto</label>
               <div className="custom-control custom-checkbox">
                 <input
                   id="do-bold"
@@ -625,7 +625,7 @@ export default class FormElementsEdit extends React.Component {
                   onChange={this.editElementProp.bind(this, "bold", "checked")}
                 />
                 <label className="custom-control-label" htmlFor="do-bold">
-                  Bold
+                  Negrita
                 </label>
               </div>
               <div className="custom-control custom-checkbox">
@@ -642,7 +642,7 @@ export default class FormElementsEdit extends React.Component {
                   )}
                 />
                 <label className="custom-control-label" htmlFor="do-italic">
-                  Italic
+                  Cursiva
                 </label>
               </div>
             </div>
@@ -650,7 +650,7 @@ export default class FormElementsEdit extends React.Component {
         {this.props.element.showDescription && (
           <div className="form-group">
             <label className="control-label" htmlFor="questionDescription">
-              Description
+              Descripción
             </label>
             <TextAreaAutosize
               type="text"
@@ -662,7 +662,7 @@ export default class FormElementsEdit extends React.Component {
             />
           </div>
         )}
-        {this.props.showCorrectColumn &&
+        {/* {this.props.showCorrectColumn &&
           this.props.element.canHaveAnswer &&
           !this.props.element.hasOwnProperty("options") && (
             <div className="form-group">
@@ -678,8 +678,8 @@ export default class FormElementsEdit extends React.Component {
                 onChange={this.editElementProp.bind(this, "correct", "value")}
               />
             </div>
-          )}
-        {this.props.element.canPopulateFromApi &&
+          )} */}
+        {/* {this.props.element.canPopulateFromApi &&
           this.props.element.hasOwnProperty("options") && (
             <div className="form-group">
               <label className="control-label" htmlFor="optionsApiUrl">
@@ -705,7 +705,7 @@ export default class FormElementsEdit extends React.Component {
                 </div>
               </div>
             </div>
-          )}
+          )} */}
         {this.props.element.hasOwnProperty("options") && (
           <DynamicOptionList
             showCorrectColumn={this.props.showCorrectColumn}

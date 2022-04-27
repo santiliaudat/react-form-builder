@@ -459,7 +459,7 @@ export default class ReactForm extends React.Component {
               </div>
             )}
             {items}
-            <div className="btn-toolbar">
+            <div className={`btn-toolbar ${this.props.classNameToolbar}`}>
               {!this.props.hide_actions && this.handleRenderSubmit()}
               {!this.props.hide_actions && this.props.back_action &&
                 this.handleRenderBack()
