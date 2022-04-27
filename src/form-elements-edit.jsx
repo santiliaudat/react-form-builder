@@ -183,7 +183,7 @@ export default class FormElementsEdit extends React.Component {
 
     return (
       <div>
-        <div className="clearfix">
+        <div className="clearfix" style={{ marginTop: 50 }}>
           <h4 className="float-left h4">{this.props.element.text}</h4>
           <i
             className="float-right fa fa-times dismiss-edit"
@@ -451,7 +451,7 @@ export default class FormElementsEdit extends React.Component {
         )}
 
         {this.state.element.element === "Signature" &&
-        this.props.element.readOnly ? (
+          this.props.element.readOnly ? (
           <div className="form-group">
             <label className="control-label" htmlFor="variableKey">
               Variable Key:
@@ -524,6 +524,22 @@ export default class FormElementsEdit extends React.Component {
             </div>
           </div>
         )} */}
+
+        {this.state.element.element === "Rating" && (
+          <div className="form-group">
+            <label className="control-label" htmlFor="variableKey">
+              Cantidad de estrellas
+            </label>
+            <input
+              id="ratingAmount"
+              type="number"
+              className="form-control"
+              defaultValue={this.props.element.ratingAmount}
+              onBlur={this.updateElement.bind(this)}
+              onChange={this.editElementProp.bind(this, "ratingAmount", "value")}
+            />
+          </div>
+        )}
 
         {this.props.element.hasOwnProperty("step") && (
           <div className="form-group">

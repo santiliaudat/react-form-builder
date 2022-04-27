@@ -214,6 +214,7 @@ export default class Toolbar extends React.Component {
         label: "Ingrese la pregunta",
         icon: "fa fa-star",
         field_name: "rating_",
+        ratingAmount: 5,
       },
       {
         key: "DatePicker",
@@ -238,8 +239,8 @@ export default class Toolbar extends React.Component {
         default_value: 3,
         min_value: 1,
         max_value: 5,
-        min_label: "Easy",
-        max_label: "Difficult",
+        min_label: "Facil",
+        max_label: "Dificil",
       },
     ]
   }
@@ -499,6 +500,10 @@ export default class Toolbar extends React.Component {
       elementOptions.max_value = item.max_value;
       elementOptions.min_label = item.min_label;
       elementOptions.max_label = item.max_label;
+    }
+
+    if (item.key === "Rating") {
+      elementOptions.ratingAmount = item.ratingAmount;
     }
 
     if (item.defaultValue) {

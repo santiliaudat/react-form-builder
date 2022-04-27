@@ -16,7 +16,7 @@ const FormElements = {};
 class Header extends React.Component {
   render() {
     // const headerClasses = `dynamic-input ${this.props.data.element}-input`;
-    let classNames = "static";
+    let classNames = "static h4";
     if (this.props.data.bold) {
       classNames += " bold";
     }
@@ -32,7 +32,7 @@ class Header extends React.Component {
     return (
       <div className={baseClasses}>
         <ComponentHeader {...this.props} />
-        <h3
+        <h4
           className={classNames}
           dangerouslySetInnerHTML={{
             __html: myxss.process(this.props.data.content),
@@ -574,7 +574,7 @@ class Rating extends React.Component {
   render() {
     const props = {};
     props.name = this.props.data.field_name;
-    props.ratingAmount = 5;
+    props.ratingAmount = this.props.data.ratingAmount;
 
     if (this.props.mutable) {
       props.rating =
@@ -723,7 +723,7 @@ class Camera extends React.Component {
                   <div className="btn btn-default">
                     <i className="fa fa-camera"></i> Subir imagen
                   </div>
-                  <p>Selecciona una imagen de tu dispositivo.</p>
+                  {/* <p>Selecciona una imagen de tu dispositivo.</p> */}
                 </div>
               </div>
 
