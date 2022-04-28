@@ -45,17 +45,17 @@ export default class Toolbar extends React.Component {
         return [
           {
             value: "place_holder_option_1",
-            text: "Place holder option 1",
+            text: "Opción 1",
             key: `dropdown_option_${ID.uuid()}`,
           },
           {
             value: "place_holder_option_2",
-            text: "Place holder option 2",
+            text: "Opción 2",
             key: `dropdown_option_${ID.uuid()}`,
           },
           {
             value: "place_holder_option_3",
-            text: "Place holder option 3",
+            text: "Opción 3",
             key: `dropdown_option_${ID.uuid()}`,
           },
         ];
@@ -81,17 +81,17 @@ export default class Toolbar extends React.Component {
         return [
           {
             value: "place_holder_option_1",
-            text: "Place holder option 1",
+            text: "Opción 1",
             key: `checkboxes_option_${ID.uuid()}`,
           },
           {
             value: "place_holder_option_2",
-            text: "Place holder option 2",
+            text: "Opción 2",
             key: `checkboxes_option_${ID.uuid()}`,
           },
           {
             value: "place_holder_option_3",
-            text: "Place holder option 3",
+            text: "Opción 3",
             key: `checkboxes_option_${ID.uuid()}`,
           },
         ];
@@ -99,17 +99,17 @@ export default class Toolbar extends React.Component {
         return [
           {
             value: "place_holder_option_1",
-            text: "Place holder option 1",
+            text: "Opción 1",
             key: `radiobuttons_option_${ID.uuid()}`,
           },
           {
             value: "place_holder_option_2",
-            text: "Place holder option 2",
+            text: "Opción 2",
             key: `radiobuttons_option_${ID.uuid()}`,
           },
           {
             value: "place_holder_option_3",
-            text: "Place holder option 3",
+            text: "Opción 3",
             key: `radiobuttons_option_${ID.uuid()}`,
           },
         ];
@@ -162,7 +162,7 @@ export default class Toolbar extends React.Component {
       {
         key: "Checkboxes",
         canHaveAnswer: true,
-        name: "Check box",
+        name: "Casilla de verificación",
         icon: "fa fa-check-square",
         label: "Ingrese la pregunta",
         field_name: "checkboxes_",
@@ -172,7 +172,7 @@ export default class Toolbar extends React.Component {
       {
         key: "RadioButtons",
         canHaveAnswer: true,
-        name: "Multiple Choice",
+        name: "Múltiple opción",
         icon: "fa fa-dot-circle",
         label: "Ingrese la pregunta",
         field_name: "radiobuttons_",
@@ -213,7 +213,7 @@ export default class Toolbar extends React.Component {
       {
         key: "Rating",
         canHaveAnswer: true,
-        name: "Rating",
+        name: "Valoración de estrellas",
         label: "Ingrese la pregunta",
         icon: "fa fa-star",
         field_name: "rating_",
