@@ -703,8 +703,8 @@ class Camera extends React.Component {
         <div className="form-group">
           <ComponentLabel {...this.props} />
           {this.props.read_only === true &&
-          this.props.defaultValue &&
-          this.props.defaultValue.length > 0 ? (
+            this.props.defaultValue &&
+            this.props.defaultValue.length > 0 ? (
             <div>
               <img src={sourceDataURL} />
             </div>
@@ -779,6 +779,7 @@ class Range extends React.Component {
     props.min = this.props.data.min_value;
     props.max = this.props.data.max_value;
     props.step = this.props.data.step;
+    props.tooltip = 'show';
 
     props.value = this.state.value;
     props.change = this.changeValue;
@@ -820,6 +821,8 @@ class Range extends React.Component {
     if (this.props.data.pageBreakBefore) {
       baseClasses += " alwaysbreak";
     }
+
+    console.log(visible_marks)
 
     return (
       <div className={baseClasses}>

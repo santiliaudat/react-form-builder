@@ -148,6 +148,7 @@ export default class Toolbar extends React.Component {
         label: "Ingrese la pregunta",
         field_name: "dropdown_",
         options: [],
+        canHaveOptionCorrect: false,
       },
       // {
       //   key: "Tags",
@@ -166,6 +167,7 @@ export default class Toolbar extends React.Component {
         label: "Ingrese la pregunta",
         field_name: "checkboxes_",
         options: [],
+        canHaveOptionCorrect: false,
       },
       {
         key: "RadioButtons",
@@ -175,6 +177,7 @@ export default class Toolbar extends React.Component {
         label: "Ingrese la pregunta",
         field_name: "radiobuttons_",
         options: [],
+        canHaveOptionCorrect: false,
       },
       {
         key: "TextInput",
@@ -220,7 +223,7 @@ export default class Toolbar extends React.Component {
         key: "DatePicker",
         canDefaultToday: true,
         canReadOnly: true,
-        dateFormat: "MM/dd/yyyy",
+        dateFormat: "dd/MM/yyyy",
         timeFormat: "hh:mm aa",
         showTimeSelect: false,
         showTimeSelectOnly: false,
