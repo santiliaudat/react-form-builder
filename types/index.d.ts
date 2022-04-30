@@ -148,6 +148,7 @@ export interface FormGeneratorProps {
   variables?: Record<any, any>;
   submitButton?: React.ReactElement;
   backButton?: React.ReactElement;
+  fontFamily?: string;
 }
 
 export class ReactFormGenerator extends React.Component<FormGeneratorProps> {}

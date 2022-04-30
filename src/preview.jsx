@@ -300,8 +300,11 @@ export default class Preview extends React.Component {
     }
     const data = this.state.data.filter((x) => !!x && !x.parentId);
     const items = data.map((item, index) => this.getElement(item, index));
+    const fontFamily = this.props.fontFamily ? this.props.fontFamily : "inherit";
+
+
     return (
-      <div className={classes}>
+      <div className={classes} style={{ fontFamily }}>
         <div className="edit-form" ref={this.editForm}>
           {this.props.editElement !== null && this.showEditForm()}
         </div>
