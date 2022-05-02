@@ -109,6 +109,7 @@ export default class Demobar extends React.Component {
                   // skip_validations={true}
                   // onSubmit={this._onSubmit}
                   variables={this.props.variables}
+                  fontSize="30px"
                   data={this.state.data} />
 
                 <div className="modal-footer">

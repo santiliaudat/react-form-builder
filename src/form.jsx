@@ -433,9 +433,10 @@ export default class ReactForm extends React.Component {
     const backName = this.props.back_name ? this.props.back_name : "Cancel";
 
     const fontFamily = this.props.fontFamily ? this.props.fontFamily : "Roboto";
+    const fontSize = this.props.fontSize ? this.props.fontSize : "12px";
 
     return (
-      <div style={{ fontFamily }}>
+      <div style={{ fontFamily, fontSize }}>
         <FormValidator emitter={this.emitter} />
         <div className={`react-form-builder-form ${this.props.className}`}>
           <form
