@@ -41,13 +41,19 @@ export default class StarRating extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.ratingAmount !== this.props.ratingAmount) {
+      this.setState(state => ({ ...state, glyph: this.getStars(this.props.ratingAmount) }))
+    }
+  }
+
   /**
    * Gets the stars based on ratingAmount
    * @return {string} stars
    */
-  getStars() {
+  getStars(numRating = this.props.ratingAmount) {
     let stars = '';
-    const numRating = this.props.ratingAmount;
+    // const numRating = this.props.ratingAmount;
     for (let i = 0; i < numRating; i++) {
       stars += '\u2605';
     }
@@ -269,7 +275,6 @@ StarRating.propTypes = {
 
 StarRating.defaultProps = {
   step: 0.5,
-  ratingAmount: 5,
   onRatingClick() { },
   disabled: false,
 };

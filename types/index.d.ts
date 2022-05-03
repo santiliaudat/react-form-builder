@@ -149,7 +149,7 @@ export interface FormGeneratorProps {
   submitButton?: React.ReactElement;
   backButton?: React.ReactElement;
   fontFamily?: string;
-  fontSize?: string;
+  fontSize?: number;
 }
 
 export class ReactFormGenerator extends React.Component<FormGeneratorProps> {}
